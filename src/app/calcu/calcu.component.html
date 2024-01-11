@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+<body>
+    <div id="calculadora">
+        <div id="pantalla">{{ pantalla }}</div>
+        <div id="teclado">
+            <button (click)="agregarCaracter(' ')" disabled></button>
+            <button (click)="borrarUltimoCaracter()" disabled></button>
+            <button class="operador" (click)="borrarEntrada()">CE</button>
+            <button class="operador" (click)="borrarTodo()">C</button>
+            <button (click)="agregarCaracter('7')">7</button>
+            <button (click)="agregarCaracter('8')">8</button>
+            <button (click)="agregarCaracter('9')">9</button>
+            <button class="operador" (click)="agregarOperador('/')">/</button>
+            <button (click)="agregarCaracter('4')">4</button>
+            <button (click)="agregarCaracter('5')">5</button>
+            <button (click)="agregarCaracter('6')">6</button>
+            <button class="operador" (click)="agregarOperador('*')">*</button>
+            <button (click)="agregarCaracter('1')">1</button>
+            <button (click)="agregarCaracter('2')">2</button>
+            <button (click)="agregarCaracter('3')">3</button>
+            <button class="operador" (click)="agregarOperador('-')">-</button>
+            <button (click)="agregarCaracter('0')">0</button>
+            <button (click)="agregarCaracter('.')">.</button>
+            <button class="operador" (click)="calcularResultado()">=</button>
+            <button class="operador" (click)="agregarOperador('+')">+</button>
+        </div>
+    </div>
+</body>
+</html>
